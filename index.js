@@ -167,8 +167,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    let str = array.toString();
+    let output= str.split(" ");
+    let str2 = output.toString();
+    let output2 = str2.split(",");
+    if(output2.includes(string)){
+       array.unshift(string)
+       return array
+    } else {
+        return "There are no matches."
+    }
 }
 
 
